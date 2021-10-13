@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { TodoProvider } from "./components/context";
+import Footer from "./components/Footer";
+import FormInputs from "./components/FormInput";
+import List from "./components/ItemsList";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TodoProvider>
+      <main>
+        <h1>WEVENTURE Coding Challenge</h1>
+       <FormInputs />
+         <List />
+        <Footer />
+      </main>
+    </TodoProvider>
   );
 }
-
 export default App;
